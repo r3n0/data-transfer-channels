@@ -16,3 +16,27 @@ cd ~/mi-servidor-servo
 npm init -y
 npm install express socket.io
 ```
+
+## 2 Ejecución del servidor con PM2
+
+```bash
+sudo npm install pm2 -g
+pm2 start index.js --name "servidor-sockets"
+```
+
+para verificar el estado del servidor 
+
+```bash
+pm2 status
+```
+
+
+Detenerlo: 
+```bash
+pm2 stop servidor-sockets
+```
+
+Reiniciarlo: 
+```bash
+pm2 restart servidor-sockets
+```

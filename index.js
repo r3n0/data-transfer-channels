@@ -23,11 +23,11 @@ io.on('connection', (socket) => {
   });
 
   // Evento 2: Recibir ángulo y retransmitirlo al canal correcto
-  socket.on('send-angle', (data) => {
-    // data debe ser un objeto: { channel: "nombre", angle: 90 }
-    if (data.channel && data.angle !== undefined) {
+  socket.on('send-value', (data) => {
+    // data debe ser un objeto: { channel: "nombre", value: 90 }
+    if (data.channel && data.value !== undefined) {
       // Enviamos el ángulo solo a los demás en ese canal
-      socket.to(data.channel).emit('update-servo', data.angle);
+      socket.to(data.channel).emit('update-value', data.value);
     }
   });
 
