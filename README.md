@@ -5,6 +5,16 @@ Esta es una implementación de un servidor de sockets que permite la transferenc
 
 Está pensado para transferir datos entre nodos usando identificadores de canales
 
+## Puertos
+
+Es importante configurar el servidor de manera que el puerto 3000 esté habilitado por el firewall.
+
+### Inbound
+
+|Type|Protocol|Port Range|Sources|
+|---|---|---|---|
+|Custom|TCP|3000|All IPv4 All IPv6|
+
 ## 1 Instalación de dependencias
 
 ```bash
