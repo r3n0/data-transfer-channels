@@ -15,7 +15,21 @@ Es importante configurar el servidor de manera que el puerto 3000 esté habilita
 |---|---|---|---|
 |Custom|TCP|3000|All IPv4 All IPv6|
 
-## 1 Instalación de dependencias
+## 1 Instalación 
+
+Primero es importante instalar node.js
+
+```bash
+sudo apt update
+sudo apt install nodejs
+```
+
+Luego es importante instalar npm
+```bash
+sudo apt install npm
+```
+
+A continuación se instalan las dependencias
 
 ```bash
 mkdir ~/mi-servidor-servo
