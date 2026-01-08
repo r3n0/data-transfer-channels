@@ -22,11 +22,11 @@ io.on('connection', (socket) => {
     console.log(`🏠 Nodo ${socket.id} se unió al canal: ${channelName}`);
   });
 
-  // Evento 2: Recibir ángulo y retransmitirlo al canal correcto
+  // Evento 2: Recibir dato y retransmitirlo al canal correcto
   socket.on('send-value', (data) => {
     // data debe ser un objeto: { channel: "nombre", value: 90 }
     if (data.channel && data.value !== undefined) {
-      // Enviamos el ángulo solo a los demás en ese canal
+      // Enviamos el dato solo a los demás en ese canal
       socket.to(data.channel).emit('update-value', data.value);
     }
   });
